@@ -1,13 +1,18 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
+import Home from "./pages/Home";
+import AboutPage from "./pages/AboutPage";
+import FormPage from "./pages/FormPage";
 
 function App() {
   return (
-    <>
-        <h1>Crop Yield Applicaiton</h1>
-      
-
-      
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/contact" element={<FormPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

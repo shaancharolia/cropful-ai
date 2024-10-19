@@ -1,0 +1,13 @@
+libraries used:
+pandas
+sklearn
+
+model details:
+linear regression model
+rmse of 0.501096 (prediction deviates by 0.5 tons/hecatre on average from actual)
+error of 10.7%
+parameters: Region, Soil_Type, Crop, Rainfall_mm, Temperature_Celsius, Fertilizer_Used, Irrigation_Used, Days_to_Harvest
+trained with 80%
+tested 15%
+left 5% for user testing
+
