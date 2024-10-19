@@ -5,6 +5,9 @@ const Header = () => {
     function clickAbout() {
         window.location.href ='/about';
     }
+    function clickHome() {
+        window.location.href = '/';
+    }
 
     
   
@@ -16,6 +19,7 @@ const Header = () => {
         <div className="text-2xl font-bold">
           <a href="/">
             <img
+              onClick={clickHome}
               src=".\src\assets\logo.png"
               alt="Logo"
               className="h-10 w-auto mr-2"
