@@ -1,8 +1,14 @@
 
+import * as motion from "framer-motion/client"
+
+
+
 const MainBody = () => {
     function clickForm() {
         window.location.href ='/form';
     }
+
+    const text = "Lorem ipsum odor amet, consectetuer adipiscing elit. Cras consectetur sagittis neque cras vulputate vulputate risus.".split("");
 
     return (
     <div className="relative overflow-hidden">
@@ -23,15 +29,27 @@ const MainBody = () => {
               </h1>
             </div>
 
-            <div className="mt-5 max-w-3xl">
-              <p className="text-lg text-black">blah blah</p>
+            <div className="mt-5 max-w-3xl text-lg text-black App">
+            {text.map((el, i) => (
+              <motion.span
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{
+                duration: .25,
+                delay: i / 100
+              }}
+              key={i}
+              >
+              {el}{""}
+              </motion.span>
+            ))}
             </div>
 
             <div className="mt-8 gap-3 flex justify-center">
-              <a
+              <motion.button
                 onClick={clickForm}
                 className="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-green-600 text-white hover:bg-green-700 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                href="#"
+                whileTap={{scale: 0.85}}
               >
                 Get started
                 <svg
@@ -48,7 +66,7 @@ const MainBody = () => {
                 >
                   <path d="m9 18 6-6-6-6" />
                 </svg>
-              </a>
+              </motion.button>
             </div>
           </div>
         </div>
