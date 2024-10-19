@@ -14,21 +14,19 @@ const MainBody = () => {
           <div className="max-w-2xl text-center mx-auto">
             <div className="mt-5 max-w-2xl">
               <h1 className="block font-semibold text-gray-800 text-4xl md:text-5xl lg:text-6xl dark:text-green-700">
-                The Intuitive Web Solutions
+                Crop Yield Solutions
               </h1>
             </div>
 
             <div className="mt-5 max-w-3xl">
               <p className="text-lg text-black">
-                Preline UI is an open-source set of prebuilt UI components,
-                ready-to-use examples and Figma design system based on the
-                utility-first Tailwind CSS framework.
+                blah blah 
               </p>
             </div>
 
             <div className="mt-8 gap-3 flex justify-center">
               <a
-                className="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                className="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-green-600 text-white hover:bg-green-700 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
                 href="#"
               >
                 Get started
