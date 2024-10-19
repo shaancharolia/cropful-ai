@@ -20,9 +20,9 @@ const Header = () => {
           <a href="/">
             <img
               onClick={clickHome}
-              src=".\src\assets\logo.png"
+              src=".\src\assets\Cropful_logo.png"
               alt="Logo"
-              className="h-10 w-auto mr-2"
+              className="h-14 w-auto"
             />
             <span className="text-2xl font-bold text-white"></span>{" "}
             {/* Company Name */}
