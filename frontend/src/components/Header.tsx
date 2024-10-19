@@ -31,10 +31,10 @@ const Header = () => {
 
         {/* Buttons Section */}
         <div className="space-x-4">
-          <button className="text-black font-bold py-2 px-4 rounded">
+          <button className="text-green-700 font-bold py-2 px-4 rounded">
             How it Works
           </button>
-          <button onClick={clickAbout} className="text-black font-bold py-2 px-4">
+          <button onClick={clickAbout} className="text-green-700 font-bold py-2 px-4">
             About Us
           </button>
         </div>
