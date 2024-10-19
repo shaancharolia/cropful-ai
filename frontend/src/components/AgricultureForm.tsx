@@ -1,5 +1,3 @@
-// src/components/AgriculturalForm.tsx
-
 import React, { useState } from "react";
 
 const AgriculturalForm: React.FC = () => {
