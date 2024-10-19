@@ -36,7 +36,7 @@ const AgriculturalForm: React.FC = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto my-10 p-5 border border-gray-300 rounded-lg shadow-md">
+    <div className="max-w-xl mx-auto my-10 p-5 bg-gray-100 rounded-lg">
       <h2 className="text-lg font-bold mb-4">Agricultural Data Form</h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div className="flex flex-col">
