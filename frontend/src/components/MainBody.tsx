@@ -20,7 +20,7 @@ const MainBody = () => {
             </div>
 
             <div className="mt-5 max-w-3xl">
-            <p className="text-lg text-gray-600 dark:text-gray-400">Preline UI is an open-source set of prebuilt UI components, ready-to-use examples and Figma design system based on the utility-first Tailwind CSS framework.</p>
+            <p className="text-lg text-black">Preline UI is an open-source set of prebuilt UI components, ready-to-use examples and Figma design system based on the utility-first Tailwind CSS framework.</p>
             </div>
 
             <div className="mt-8 gap-3 flex justify-center">

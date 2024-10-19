@@ -5,15 +5,23 @@ const Header = () => {
         {/* Logo Section */}
 
         <div className="text-2xl font-bold">
-          <a href="/">Logo</a>
+          <a href="/">
+            <img
+              src = ".\src\assets\logo.png"
+              alt = "Logo"
+              className = "h-10 w-auto mr-2"
+            />
+            <span className="text-2xl font-bold text-white"></span> {/* Company Name */}
+          
+          </a>
         </div>
 
         {/* Buttons Section */}
         <div className="space-x-4">
-          <button className=" hover:blue-700 text-black font-bold py-2 px-4 rounded">
+          <button className="text-black font-bold py-2 px-4 rounded">
             How it Works
           </button>
-          <button className=" hover:gray-300 text-black font-bold py-2 px-4 ">
+          <button className="text-black font-bold py-2 px-4">
             About Us
           </button>
         </div>
