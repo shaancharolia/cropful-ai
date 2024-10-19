@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../components/Header";
 import MainBody from "../components/MainBody";
-import CardSpotlight from "../components/CardSpotLight";
+import CardSpotlight from "../components/CardSpotlight";
 
 const Home: React.FC = () => {
   return (

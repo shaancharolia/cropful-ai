@@ -1,17 +1,12 @@
-
 const Header = () => {
-    
+  function clickAbout() {
+    window.location.href = "/about";
+  }
+  function clickHome() {
+    window.location.href = "/";
+  }
 
-    function clickAbout() {
-        window.location.href ='/about';
-    }
-    function clickHome() {
-        window.location.href = '/';
-    }
-
-    
-  
-    return (
+  return (
     <header>
       <div className="container mx-auto flex justify-between items-center py-8">
         {/* Logo Section */}
@@ -34,7 +29,10 @@ const Header = () => {
           <button className="text-green-700 font-bold py-2 px-4 rounded">
             How it Works
           </button>
-          <button onClick={clickAbout} className="text-green-700 font-bold py-2 px-4">
+          <button
+            onClick={clickAbout}
+            className="text-green-700 font-bold py-2 px-4"
+          >
             About Us
           </button>
         </div>
