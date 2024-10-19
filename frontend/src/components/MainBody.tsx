@@ -19,9 +19,7 @@ const MainBody = () => {
             </div>
 
             <div className="mt-5 max-w-3xl">
-              <p className="text-lg text-black">
-                blah blah 
-              </p>
+              <p className="text-lg text-black">blah blah</p>
             </div>
 
             <div className="mt-8 gap-3 flex justify-center">
