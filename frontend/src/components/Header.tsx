@@ -1,15 +1,9 @@
-import React from 'react';
-
 const Header = () => {
   return (
-    
     <header>
-      
-      
-      
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo Section */}
-        
+
         <div className="text-2xl font-bold">
           <a href="/">Logo</a>
         </div>
