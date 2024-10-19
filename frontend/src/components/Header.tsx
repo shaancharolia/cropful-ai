@@ -10,7 +10,6 @@ const Header = () => {
     <header>
       <div className="container mx-auto flex justify-between items-center py-8">
         {/* Logo Section */}
-
         <div className="text-2xl font-bold">
           <a href="/">
             <img
@@ -37,6 +36,8 @@ const Header = () => {
           </button>
         </div>
       </div>
+      {/* Horizontal line */}
+      <hr className="border-t-2 border-gray-300" />
     </header>
   );
 };

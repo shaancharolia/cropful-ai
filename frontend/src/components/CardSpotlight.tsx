@@ -1,6 +1,8 @@
 "use client";
 import { useState, MouseEvent, useCallback } from "react";
-import TractorImage from "../assets/Tractor.jpg"; // Import your image
+import TractorImage from "../assets/Tractor.jpg"; // Import your images
+import WheatImage from "../assets/wheat.jpg"; // Import a second image
+import FarmImage from "../assets/farm.jpg"; // Import a third image
 
 function throttle<T extends (...args: any[]) => any>(
   func: T,
@@ -17,7 +19,13 @@ function throttle<T extends (...args: any[]) => any>(
   };
 }
 
-const CardSpotlight = () => {
+const CardSpotlight = ({
+  customStyle,
+  image,
+}: {
+  customStyle: React.CSSProperties;
+  image: string;
+}) => {
   const [rotate, setRotate] = useState({ x: 0, y: 0 });
 
   const onMouseMove = useCallback(
@@ -41,21 +49,54 @@ const CardSpotlight = () => {
   };
 
   return (
+    <div
+      className="card absolute rounded-2xl transition-[all_400ms_cubic-bezier(0.03,0.98,0.52,0.99)_0s] will-change-transform"
+      onMouseMove={onMouseMove}
+      onMouseLeave={onMouseLeave}
+      style={{
+        ...customStyle,
+        aspectRatio: "16 / 9", // Keep the aspect ratio
+        width: "400px", // Set a larger width
+        height: "auto", // Automatically adjust height based on aspect ratio
+        transform: `perspective(1000px) rotateX(${rotate.x}deg) rotateY(${rotate.y}deg) scale3d(1, 1, 1)`,
+        transition: "all 400ms cubic-bezier(0.03, 0.98, 0.52, 0.99) 0s",
+        backgroundImage: `url(${image})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    ></div>
+  );
+};
+
+const CardGallery = () => {
+  return (
     <>
       <div
-        className="card relative h-52 w-52 rounded-2xl transition-[all_400ms_cubic-bezier(0.03,0.98,0.52,0.99)_0s] will-change-transform"
-        onMouseMove={onMouseMove}
-        onMouseLeave={onMouseLeave}
-        style={{
-          transform: `perspective(1000px) rotateX(${rotate.x}deg) rotateY(${rotate.y}deg) scale3d(1, 1, 1)`,
-          transition: "all 400ms cubic-bezier(0.03, 0.98, 0.52, 0.99) 0s",
-          backgroundImage: `url(${TractorImage})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      ></div>
+        className="relative flex flex-wrap items-center justify-center max-h-1 overflow-auto" // Use flexbox for alignment
+        style={{ minHeight: "100vh", overflow: "hidden" }} // Set minHeight and overflow
+      >
+        {/* Card 1: Positioned top-left with TractorImage */}
+        <CardSpotlight
+          customStyle={{ top: "0%", left: "7%", transform: "rotate(-5deg)" }} // Adjusted top position
+          image={TractorImage} // Pass TractorImage
+        />
+        {/* Card 2: Positioned slightly lower and more centered with FarmImage */}
+        <CardSpotlight
+          customStyle={{ top: "7%", left: "38%", transform: "rotate(10deg)" }} // Adjusted top position
+          image={FarmImage} // Pass FarmImage
+        />
+        {/* Card 3: Positioned more to the right and rotated with WheatImage */}
+        <CardSpotlight
+          customStyle={{
+            top: "3%",
+            right: "9%",
+            transform: "rotate(-15deg)",
+          }} // Adjusted top position
+          image={WheatImage} // Pass WheatImage
+        />
+      </div>
     </>
   );
 };
 
-export default CardSpotlight;
+export default CardGallery;
