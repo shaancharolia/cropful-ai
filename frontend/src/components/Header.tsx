@@ -5,6 +5,7 @@ const Header = () => {
     function clickAbout() {
         window.location.href ='/about';
     }
+
     
   
     return (
