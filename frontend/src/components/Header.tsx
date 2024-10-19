@@ -16,12 +16,12 @@ const Header = () => {
         <div className="text-2xl font-bold">
           <a href="/">
             <img
-              src = ".\src\assets\logo.png"
-              alt = "Logo"
-              className = "h-10 w-auto mr-2"
+              src=".\src\assets\logo.png"
+              alt="Logo"
+              className="h-10 w-auto mr-2"
             />
-            <span className="text-2xl font-bold text-white"></span> {/* Company Name */}
-          
+            <span className="text-2xl font-bold text-white"></span>{" "}
+            {/* Company Name */}
           </a>
         </div>
 
