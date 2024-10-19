@@ -20,9 +20,9 @@ const Header = () => {
           <a href="/">
             <img
               onClick={clickHome}
-              src=".\src\assets\logo.png"
+              src=".\src\assets\Cropful_logo.png"
               alt="Logo"
-              className="h-10 w-auto mr-2"
+              className="h-14 w-auto"
             />
             <span className="text-2xl font-bold text-white"></span>{" "}
             {/* Company Name */}
@@ -31,10 +31,10 @@ const Header = () => {
 
         {/* Buttons Section */}
         <div className="space-x-4">
-          <button className="text-black font-bold py-2 px-4 rounded">
+          <button className="text-green-700 font-bold py-2 px-4 rounded">
             How it Works
           </button>
-          <button onClick={clickAbout} className="text-black font-bold py-2 px-4">
+          <button onClick={clickAbout} className="text-green-700 font-bold py-2 px-4">
             About Us
           </button>
         </div>
