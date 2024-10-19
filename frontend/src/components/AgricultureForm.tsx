@@ -147,18 +147,6 @@ const AgriculturalForm: React.FC = () => {
         </div>
 
         <div className="flex flex-col">
-          <label className="font-medium mb-1">Weather Condition</label>
-          <input
-            type="text"
-            name="weatherCondition"
-            value={formData.weatherCondition}
-            onChange={handleChange}
-            className="border border-gray-300 rounded p-2"
-            required
-          />
-        </div>
-
-        <div className="flex flex-col">
           <label className="font-medium mb-1">Days to Harvest</label>
           <input
             type="number"
