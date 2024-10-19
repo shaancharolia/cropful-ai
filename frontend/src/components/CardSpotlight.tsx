@@ -17,7 +17,7 @@ function throttle<T extends (...args: any[]) => any>(
   };
 }
 
-const CardTilt = () => {
+const CardSpotlight = () => {
   const [rotate, setRotate] = useState({ x: 0, y: 0 });
 
   const onMouseMove = useCallback(
@@ -58,4 +58,4 @@ const CardTilt = () => {
   );
 };
 
-export default CardTilt;
+export default CardSpotlight;
