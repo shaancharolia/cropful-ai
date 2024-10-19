@@ -19,8 +19,6 @@ data['Region'] = data['Region'].map(region_mapping)
 data['Fertilizer_Used'] = data['Fertilizer_Used'].map({False: 0, True: 1})
 data['Irrigation_Used'] = data['Irrigation_Used'].map({False: 0, True: 1})
 
-#test
-frs = 5
 
 # Define the features (X) and target (y)
 features = ['Region', 'Soil_Type', 'Crop', 'Rainfall_mm', 'Temperature_Celsius', 
