@@ -1,5 +1,10 @@
+
 const MainBody = () => {
-  return (
+    function clickForm() {
+        window.location.href ='/form';
+    }
+
+    return (
     <div className="relative overflow-hidden">
       <div
         aria-hidden="true"
@@ -26,6 +31,7 @@ const MainBody = () => {
 
             <div className="mt-8 gap-3 flex justify-center">
               <a
+                onClick={clickForm}
                 className="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-green-600 text-white hover:bg-green-700 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
                 href="#"
               >

@@ -1,5 +1,13 @@
+
 const Header = () => {
-  return (
+    
+
+    function clickAbout() {
+        window.location.href ='/about';
+    }
+    
+  
+    return (
     <header>
       <div className="container mx-auto flex justify-between items-center py-8">
         {/* Logo Section */}
@@ -21,7 +29,7 @@ const Header = () => {
           <button className="text-black font-bold py-2 px-4 rounded">
             How it Works
           </button>
-          <button className="text-black font-bold py-2 px-4">
+          <button onClick={clickAbout} className="text-black font-bold py-2 px-4">
             About Us
           </button>
         </div>
