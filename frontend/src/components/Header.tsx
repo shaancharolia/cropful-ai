@@ -8,7 +8,7 @@ const Header = () => {
 
   return (
     <header>
-      <div className="container mx-auto flex justify-between items-center py-8">
+      <div className="container mx-auto flex justify-between items-center py-8 pt-8 pb-4">
         {/* Logo Section */}
         <div className="text-2xl font-bold">
           <a href="/">
@@ -22,7 +22,6 @@ const Header = () => {
             {/* Company Name */}
           </a>
         </div>
-
         {/* Buttons Section */}
         <div className="space-x-4">
           <button className="text-green-700 font-bold py-2 px-4 rounded">
@@ -36,8 +35,9 @@ const Header = () => {
           </button>
         </div>
       </div>
-      {/* Horizontal line */}
-      <hr className="border-t-2 border-gray-300" />
+      <div className="flex justify-center">
+        <hr className="w-11/12 border-t border-green-600" />
+      </div>
     </header>
   );
 };
