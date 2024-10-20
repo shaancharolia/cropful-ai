@@ -1,6 +1,9 @@
 libraries used:
 pandas
 sklearn
+os
+pickle
+
 
 model details:
 linear regression model
