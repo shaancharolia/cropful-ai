@@ -6,7 +6,7 @@ const MainBody = () => {
   }
 
   const text =
-    "Lorem ipsum odor amet, consectetuer adipiscing elit. Cras consectetur sagittis neque cras vulputate vulputate risus. Nec mi vehicula gravida lacus hendrerit class mauris vestibulum. Platea nullam risus vestibulum habitasse felis duis dictum.".split(
+    "We are Cropful! We’ve developed a machine learning solution that helps farmers predict optimal crop yields based on key factors like soil type, rainfall, temperature, and more. Our easy-to-use platform allows users to input these variables and receive accurate predictions, enabling smarter resource allocation and improved agricultural productivity. Cropful aims to revolutionize farming decisions with the power of the future.".split(
       " "
     );
 
