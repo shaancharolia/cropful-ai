@@ -4,7 +4,7 @@ import SlidingCard from "../components/SlidingCard";
 import TractorImage from "../assets/Tractor.jpg"; // Adjust the path as necessary
 import WheatImage from "../assets/wheat.jpg";
 import FarmImage from "../assets/farm.jpg";
-import AboutTitle from "../components/AboutTitle";
+import HowWorksTitle from "../components/HowWorksTitle";
 import ParticlesComponent from "../components/particles";
 import Box from "../components/Box";
 
@@ -35,7 +35,7 @@ const HowItWorks: React.FC = () => {
 
       <div className="min-h-screen h- bg-gradient-to-br from-green-300 via-green-400 to-green-200">
         <Header></Header>
-        <AboutTitle></AboutTitle>
+        <HowWorksTitle></HowWorksTitle>
         <Box>
           CROPful is an AI model that allows farmers to input data like region,
           climate, crop type, and fertilizer use to receive an estimated crop
