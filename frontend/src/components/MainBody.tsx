@@ -26,7 +26,7 @@ const MainBody = () => {
               </h1>
             </div>
 
-            <div className="App">
+            <div className="App py-4">
               {text.map((el, i) => (
                 <motion.span
                   initial={{ opacity: 0 }}
