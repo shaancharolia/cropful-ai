@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../components/Header";
 import SlidingCard from "../components/SlidingCard";
 import TractorImage from "../assets/Tractor.jpg"; // Adjust the path as necessary
-import WheatImage from "../assets/wheat.jpg";
+import ShaanImage from "../assets/Shaan.jpg";
 import FarmImage from "../assets/farm.jpg";
 import AboutTitle from "../components/AboutTitle";
 import ParticlesComponent from "../components/particles";
@@ -10,20 +10,20 @@ import ParticlesComponent from "../components/particles";
 const AboutPage: React.FC = () => {
   const cardData = [
     {
-      text: "Card 1: This is the first card.",
+      text: "Parth",
       imageSrc: TractorImage, // Use imported image
     },
     {
-      text: "Card 2: This is the second card.",
-      imageSrc: WheatImage, // Use imported image
+      text: "Shaan",
+      imageSrc: ShaanImage, // Use imported image
     },
     {
-      text: "Card 3: This is the third card.",
+      text: "Abhi",
       imageSrc: FarmImage, // Use imported image
     },
     // Add more cards as needed
     {
-      text: "abhi goes here",
+      text: "Nitin",
       imageSrc: TractorImage,
     },
   ];

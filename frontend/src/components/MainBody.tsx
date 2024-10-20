@@ -1,7 +1,14 @@
+import { motion } from "framer-motion";
+
 const MainBody = () => {
   function clickForm() {
     window.location.href = "/form";
   }
+
+  const text =
+    "Lorem ipsum odor amet, consectetuer adipiscing elit. Cras consectetur sagittis neque cras vulputate vulputate risus. Nec mi vehicula gravida lacus hendrerit class mauris vestibulum. Platea nullam risus vestibulum habitasse felis duis dictum.".split(
+      " "
+    );
 
   return (
     <div className="relative overflow-hidden">
@@ -22,8 +29,20 @@ const MainBody = () => {
               </h1>
             </div>
 
-            <div className="mt-5 max-w-3xl">
-              <p className="text-lg text-black">blah blah</p>
+            <div className="App py-4">
+              {text.map((el, i) => (
+                <motion.span
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{
+                    duration: 0.25,
+                    delay: i / 10,
+                  }}
+                  key={i}
+                >
+                  {el}{" "}
+                </motion.span>
+              ))}
             </div>
 
             <div className="mt-8 gap-3 flex justify-center">
