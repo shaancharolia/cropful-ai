@@ -35,9 +35,7 @@ const Header = () => {
           </button>
         </div>
       </div>
-      <div className="flex justify-center">
-        <hr className="w-11/12 border-t border-green-600" />
-      </div>
+      
     </header>
   );
 };
