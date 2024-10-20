@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import AboutPage from "./pages/AboutPage";
 import FormPage from "./pages/FormPage";
 import HowItWorks from "./pages/HowItWorks";
+import MapPage from "./pages/MapPage";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/howitworks" element={<HowItWorks />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/form" element={<FormPage />} />
+        <Route path="/map" element={<MapPage />} />
       </Routes>
     </BrowserRouter>
   );
