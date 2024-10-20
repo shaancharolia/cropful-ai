@@ -9,7 +9,6 @@ const AgriculturalForm: React.FC = () => {
     temperature: "",
     fertilizerUsed: "",
     irrigationUsed: "",
-    weatherCondition: "",
     daysToHarvest: "",
   });
 
@@ -24,16 +23,36 @@ const AgriculturalForm: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    console.log("Form Data being sent:", formData);
 
-    // Call your AI algorithm here. This is a mock function.
     const calculatedYieldSize = await determineYieldSize(formData);
     setYieldSize(calculatedYieldSize);
+    console.log("test statement 1"); // new test
   };
 
   const determineYieldSize = async (data: typeof formData) => {
-    // Mocking an AI algorithm response. Replace this with your actual logic.
-    return `Estimated Yield Size: ${Math.random() * 100} tons`;
-  };
+    try {
+        const response = await fetch('http://127.0.0.1:5000/predict', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        });
+        
+
+        if (!response.ok) {
+            throw new Error('Failed to fetch data');
+        }
+
+        const result = await response.json();
+        return `Estimated Yield Size: ${result.predictedYield.toFixed(2)} tons`;
+    } catch (error) {
+        console.error('Error:', error);
+        return 'Error calculating yield size.';
+    }
+};
+
 
   return (
     <div className="max-w-xl mx-auto my-10 p-5 bg-gray-100 rounded-lg">
@@ -144,18 +163,6 @@ const AgriculturalForm: React.FC = () => {
             <option value="Yes">Yes</option>
             <option value="No">No</option>
           </select>
-        </div>
-
-        <div className="flex flex-col">
-          <label className="font-medium mb-1">Weather Condition</label>
-          <input
-            type="text"
-            name="weatherCondition"
-            value={formData.weatherCondition}
-            onChange={handleChange}
-            className="border border-gray-300 rounded p-2"
-            required
-          />
         </div>
 
         <div className="flex flex-col">
