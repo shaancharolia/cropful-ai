@@ -37,7 +37,7 @@ const HowItWorks: React.FC = () => {
         <Header></Header>
         <AboutTitle></AboutTitle>
         <Box>
-          We created an AI model that allows farmers to input data like region,
+          CROPful is an AI model that allows farmers to input data like region,
           climate, crop type, and fertilizer use to receive an estimated crop
           yield for the upcoming year. This tool helps farmers experiment with
           different combinations of inputs, enabling them to make informed
