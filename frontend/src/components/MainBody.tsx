@@ -24,7 +24,7 @@ const MainBody = () => {
         <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-16">
           <div className="max-w-2xl text-center mx-auto">
             <div className="mt-5 max-w-2xl">
-              <h1 className="block font-semibold text-gray-800 text-4xl md:text-5xl lg:text-6xl text-green-700">
+              <h1 className="block font-bold text-gray-800 text-4xl md:text-5xl lg:text-6xl text-green-700">
                 Crop Yield Solutions
               </h1>
             </div>
