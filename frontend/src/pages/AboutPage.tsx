@@ -7,7 +7,7 @@ import FarmImage from "../assets/farm.jpg";
 import AboutTitle from "../components/AboutTitle";
 import ParticlesComponent from "../components/particles";
 
-const App: React.FC = () => {
+const AboutPage: React.FC = () => {
   const cardData = [
     {
       text: "Card 1: This is the first card.",
@@ -30,24 +30,24 @@ const App: React.FC = () => {
 
   return (
     <>
-    <ParticlesComponent id="particles"/>
+      <ParticlesComponent id="particles" />
 
-    <div className="min-h-screen h- bg-gradient-to-br from-green-300 via-green-400 to-green-200">
-      <Header></Header>
-      <AboutTitle></AboutTitle>
-      <div className="flex flex-col items-center space-y-8 p-4">
-        {cardData.map((card, index) => (
-          <SlidingCard
-            key={index}
-            text={card.text}
-            index={index}
-            imageSrc={card.imageSrc}
-          />
-        ))}
+      <div className="min-h-screen h- bg-gradient-to-br from-green-300 via-green-400 to-green-200">
+        <Header></Header>
+        <AboutTitle></AboutTitle>
+        <div className="flex flex-col items-center space-y-8 p-4">
+          {cardData.map((card, index) => (
+            <SlidingCard
+              key={index}
+              text={card.text}
+              index={index}
+              imageSrc={card.imageSrc}
+            />
+          ))}
+        </div>
       </div>
-    </div>
     </>
   );
 };
 
-export default App;
+export default AboutPage;

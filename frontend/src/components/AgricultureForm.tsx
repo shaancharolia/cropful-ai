@@ -69,6 +69,7 @@ const AgriculturalForm: React.FC = () => {
             <option value="Chalky">Chalky</option>
             <option value="Clay">Clay</option>
             <option value="Loam">Loam</option>
+            <option value="Sandy">Sandy</option>
             <option value="Peaty">Peaty</option>
           </select>
         </div>
