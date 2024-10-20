@@ -8,8 +8,8 @@ const Home: React.FC = () => {
   return (
     <>
       <div className="min-h-screen h- bg-gradient-to-br from-green-300 via-green-400 to-green-200">
-        <Header></Header>
         <ParticlesComponent id="particles"/>
+        <Header></Header>
         <MainBody></MainBody>
         <CardSpotlight></CardSpotlight>
       </div>

@@ -5,6 +5,7 @@ import TractorImage from "../assets/Tractor.jpg"; // Adjust the path as necessar
 import WheatImage from "../assets/wheat.jpg";
 import FarmImage from "../assets/farm.jpg";
 import AboutTitle from "../components/AboutTitle";
+import ParticlesComponent from "../components/particles";
 
 const App: React.FC = () => {
   const cardData = [
@@ -28,6 +29,9 @@ const App: React.FC = () => {
   ];
 
   return (
+    <>
+    <ParticlesComponent id="particles"/>
+
     <div className="min-h-screen h- bg-gradient-to-br from-green-300 via-green-400 to-green-200">
       <Header></Header>
       <AboutTitle></AboutTitle>
@@ -42,6 +46,7 @@ const App: React.FC = () => {
         ))}
       </div>
     </div>
+    </>
   );
 };
 

@@ -5,6 +5,9 @@ const Header = () => {
   function clickHome() {
     window.location.href = "/";
   }
+  function clickHow() {
+    window.location.href ="/howitworks"
+  }
 
   return (
     <header>
@@ -24,7 +27,10 @@ const Header = () => {
         </div>
         {/* Buttons Section */}
         <div className="space-x-4">
-          <button className="text-green-700 font-bold py-2 px-4 rounded">
+          <button 
+            onClick={clickHow}
+            className="text-green-700 font-bold py-2 px-4 rounded"
+            >
             How it Works
           </button>
           <button
