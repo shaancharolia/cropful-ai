@@ -1,11 +1,14 @@
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
 
 const MainBody = () => {
   function clickForm() {
     window.location.href = "/form";
   }
 
-  const text = "Lorem ipsum odor amet, consectetuer adipiscing elit. Cras consectetur sagittis neque cras vulputate vulputate risus. Nec mi vehicula gravida lacus hendrerit class mauris vestibulum. Platea nullam risus vestibulum habitasse felis duis dictum.".split(" ");
+  const text =
+    "Lorem ipsum odor amet, consectetuer adipiscing elit. Cras consectetur sagittis neque cras vulputate vulputate risus. Nec mi vehicula gravida lacus hendrerit class mauris vestibulum. Platea nullam risus vestibulum habitasse felis duis dictum.".split(
+      " "
+    );
 
   return (
     <div className="relative overflow-hidden">
@@ -33,7 +36,7 @@ const MainBody = () => {
                   animate={{ opacity: 1 }}
                   transition={{
                     duration: 0.25,
-                    delay: i / 10
+                    delay: i / 10,
                   }}
                   key={i}
                 >
