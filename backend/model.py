@@ -1,10 +1,11 @@
 import pandas as pd
+import pickle
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
 
 # Load the dataset
-data = pd.read_csv('backend\crop_yield.csv')
+data = pd.read_csv('crop_yield.csv')
 
 # Mapping weather condition to numerical values
 crop_mapping = {'Barley': 0, 'Cotton': 1, 'Maize': 2, 'Rice': 3, 'Soybean': 4, 'Wheat': 5}
@@ -18,6 +19,7 @@ data['Region'] = data['Region'].map(region_mapping)
 # Mapping boolean values to 0 and 1
 data['Fertilizer_Used'] = data['Fertilizer_Used'].map({False: 0, True: 1})
 data['Irrigation_Used'] = data['Irrigation_Used'].map({False: 0, True: 1})
+
 
 # Define the features (X) and target (y)
 features = ['Region', 'Soil_Type', 'Crop', 'Rainfall_mm', 'Temperature_Celsius', 
@@ -41,6 +43,9 @@ X_test, X_addval, y_test, y_addval = train_test_split(X_temp, y_temp, test_size=
 # Initialize and train the Linear Regression model
 lr_model = LinearRegression()
 lr_model.fit(X_train, y_train)
+
+with open('linear_regression_model.pkl', 'wb') as f:
+    pickle.dump(lr_model, f)
 
 # Make predictions on the test data
 y_pred = lr_model.predict(X_test)
