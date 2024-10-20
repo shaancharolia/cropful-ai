@@ -10,7 +10,7 @@ interface SlidingCardProps {
 function SlidingCard({ text = "", index = 0, imageSrc }: SlidingCardProps) {
   return (
     <motion.div
-      className="card bg-yellow-100 shadow-md rounded-lg p-6 mb-6 w-1/2 h-80 flex" // Adjusted for flex layout
+      className="card bg-green-300 shadow-md rounded-lg p-6 mb-6 w-1/2 h-80 flex" // Adjusted for flex layout
       initial={{
         opacity: 1, // Start fully visible
         x: 0, // Start at the center

@@ -14,7 +14,7 @@ const AboutTitle = () => {
           <div className="max-w-2xl text-center mx-auto">
             <div className="mt-5 max-w-2xl">
               <h1 className="block font-bold text-gray-800 text-4xl md:text-5xl lg:text-6xl dark:text-green-700">
-                Meet The Team
+                Dive Into the Code
               </h1>
             </div>
           </div>
