@@ -8,6 +8,9 @@ const Header = () => {
   function clickHow() {
     window.location.href ="/howitworks"
   }
+  function clickYield() {
+    window.location.href = "/form"
+  }
 
   return (
     <header>
@@ -39,6 +42,13 @@ const Header = () => {
           >
             About Us
           </button>
+          <button 
+            onClick={clickYield}
+            className="text-green-700 font-bold py-2 px-4 rounded"
+            >
+            Get Yield
+          </button>
+          
         </div>
       </div>
       
