@@ -32,27 +32,27 @@ const AgriculturalForm: React.FC = () => {
 
   const determineYieldSize = async (data: typeof formData) => {
     try {
-        const response = await fetch('http://127.0.0.1:5000/predict', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(data),
-        });
-        
+      const response = await fetch("http://127.0.0.1:5000/predict", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
 
-        if (!response.ok) {
-            throw new Error('Failed to fetch data');
-        }
+      if (!response.ok) {
+        throw new Error("Failed to fetch data");
+      }
 
-        const result = await response.json();
-        return `Estimated Yield Size: ${result.predictedYield.toFixed(2)} tons`;
+      const result = await response.json();
+      return `Estimated Yield Size: ${result.predictedYield.toFixed(
+        2
+      )} tons/hectare`;
     } catch (error) {
-        console.error('Error:', error);
-        return 'Error calculating yield size.';
+      console.error("Error:", error);
+      return "Error calculating yield size.";
     }
-};
-
+  };
 
   return (
     <div className="max-w-xl mx-auto my-10 p-5 bg-gray-100 rounded-lg">
