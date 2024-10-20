@@ -10,20 +10,20 @@ import ParticlesComponent from "../components/particles";
 const HowItWorks: React.FC = () => {
   const cardData = [
     {
-      text: "Card 1: This is the first card.",
+      text: "Data",
       imageSrc: TractorImage, // Use imported image
     },
     {
-      text: "Card 2: This is the second card.",
+      text: "AI",
       imageSrc: WheatImage, // Use imported image
     },
     {
-      text: "Card 3: This is the third card.",
+      text: "whatever else",
       imageSrc: FarmImage, // Use imported image
     },
     // Add more cards as needed
     {
-      text: "abhi goes here",
+      text: "idk what goes here",
       imageSrc: TractorImage,
     },
   ];
