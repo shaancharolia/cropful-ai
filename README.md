@@ -1,1 +1,1 @@
-# tidal-hackathon-2024
+# cropful-ai
